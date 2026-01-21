@@ -3,66 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alex Realty — недвижимость</title>
+<title>Alex Realty</title>
 
 <style>
 body {
   margin: 0;
-  font-family: Inter, Arial, sans-serif;
-  background: #0b1220;
-  color: #e5e7eb;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
 }
 
 .container {
-  max-width: 600px;
-  margin: 80px auto;
-  padding: 24px;
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
 }
 
-h1 {
-  font-size: 32px;
-  margin-bottom: 16px;
+h1, h2 {
+  text-align: center;
 }
 
-p {
-  color: #9ca3af;
-  margin-bottom: 24px;
+section {
+  margin-bottom: 80px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-input, select, textarea {
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid #1f2937;
-  background: rgba(255,255,255,0.05);
-  color: #fff;
-  font-size: 15px;
-}
-
-textarea {
-  min-height: 90px;
-  resize: vertical;
-}
-
+/* ===== КНОПКА ===== */
 button {
-  margin-top: 8px;
-  padding: 14px;
-  border-radius: 12px;
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
   border: none;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 10px;
   cursor: pointer;
+  color: #000;
+  transition: 0.3s;
 }
 
 button:hover {
-  opacity: 0.9;
+  opacity: 0.85;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== ФОРМА ===== */
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ===== ЦЕННИК ===== */
+.pricing {
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.pricing ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+}
+
+.pricing li {
+  margin-bottom: 12px;
+}
+
+/* ===== КОНТАКТЫ ===== */
+.contacts {
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+.success {
+  display: none;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 40px;
 }
 </style>
 </head>
@@ -70,62 +103,78 @@ button:hover {
 <body>
 
 <div class="container">
-  <h1>Оставить заявку</h1>
-  <p>Я свяжусь с вами и помогу подобрать лучшее решение</p>
 
-  <!-- ФОРМА -->
-  <form id="contactForm">
-
-    <input type="text" name="name" placeholder="Имя и фамилия" required>
-    <input type="tel" name="phone" placeholder="Номер телефона" required>
-    <input type="text" name="messenger" placeholder="Telegram / WhatsApp" required>
-
-    <select name="service" required>
-      <option value="">Выберите услугу</option>
-      <option value="Покупка недвижимости">Покупка недвижимости</option>
-      <option value="Аренда недвижимости">Аренда недвижимости</option>
-      <option value="Новостройки">Новостройки</option>
-      <option value="Дизайн интерьера">Дизайн интерьера</option>
-      <option value="Недвижимость в Испании">Недвижимость в Испании</option>
-      <option value="Недвижимость в Дубае">Недвижимость в Дубае</option>
-    </select>
-
-    <textarea name="message" placeholder="Кратко опишите запрос"></textarea>
-
-    <button type="submit">Отправить заявку</button>
-
-  </form>
-</div>
-
-<!-- OVERLAY СПАСИБО -->
-<div id="successOverlay" style="
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(10,15,30,0.9);
-  backdrop-filter: blur(8px);
-  z-index:9999;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-">
-  <div>
-    <h1 style="font-size:42px; margin-bottom:16px;">
-      Спасибо!
-    </h1>
-    <p style="font-size:20px; color:#c7d2fe;">
-      Я свяжусь с вами в ближайшее время
+  <!-- ===== HERO ===== -->
+  <section>
+    <h1>Alex Realty</h1>
+    <p style="text-align:center; font-size:18px;">
+      Помогу с покупкой недвижимости в Польше
     </p>
-  </div>
+  </section>
+
+  <!-- ===== ЦЕНЫ ===== -->
+  <section>
+    <h2>Покупка квартиры — Познань и okolice</h2>
+    <div class="pricing">
+      <ul>
+        <li>🏠 До 500 000 PLN — <strong>3%</strong></li>
+        <li>🏠 От 500 000 до 800 000 PLN — <strong>2.5%</strong></li>
+        <li>🏠 От 800 000 PLN — <strong>2%</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== ФОРМА ===== -->
+  <section id="contacts">
+    <h2>Оставить заявку</h2>
+
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Имя и фамилия" required>
+      <input type="text" name="phone" placeholder="Номер телефона" required>
+      <input type="text" name="messenger" placeholder="Telegram / WhatsApp" required>
+
+      <select name="service" required>
+        <option value="">Выберите услугу</option>
+        <option value="Покупка недвижимости">Покупка недвижимости</option>
+        <option value="Аренда">Аренда</option>
+        <option value="Консультация">Консультация</option>
+      </select>
+
+      <textarea name="message" placeholder="Кратко опишите запрос"></textarea>
+
+      <button type="submit" id="submitBtn">Оставить заявку</button>
+    </form>
+
+    <div class="success" id="successMessage">
+      ✅ Спасибо!<br>
+      Я свяжусь с вами в ближайшее время
+    </div>
+  </section>
+
+  <!-- ===== КОНТАКТЫ ===== -->
+  <section>
+    <h2>Контакт</h2>
+    <div class="contacts">
+      📲 Telegram: <strong>@sashkatsish</strong><br><br>
+      📞 Телефон: <strong>+48 733 228 539</strong><br><br>
+      ✉️ E-mail: <strong>alextsish@gmail.com</strong>
+    </div>
+  </section>
+
 </div>
 
-<!-- JS -->
+<!-- ===== SCRIPT ===== -->
 <script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
+const form = document.getElementById("contactForm");
+const success = document.getElementById("successMessage");
+const button = document.getElementById("submitBtn");
+
+form.addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const form = e.target;
+  button.disabled = true;
+  button.innerText = "Отправка...";
+
   const data = new FormData(form);
 
   fetch("https://script.google.com/macros/s/AKfycbxQqFD7vRxJMUfvpygbA6Yc_ABr2cD0Qgr_GoN5lHU2wc37BV9NUdXSJFT6Qo9P3ZAf/exec", {
@@ -133,14 +182,16 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     body: data
   })
   .then(() => {
-    document.getElementById("successOverlay").style.display = "flex";
-    form.reset();
+    form.style.display = "none";
+    success.style.display = "block";
   })
   .catch(() => {
     alert("Ошибка отправки. Попробуйте позже.");
+    button.disabled = false;
+    button.innerText = "Оставить заявку";
   });
 });
-</script>
+  </script>
 
 </body>
 </html>
