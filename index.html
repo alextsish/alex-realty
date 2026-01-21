@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Alex Realty — Частный брокер по недвижимости</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html{scroll-behavior:smooth}
+section{scroll-margin-top:90px}
+
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  background:linear-gradient(180deg,#0b1220,#05070c);
+  color:#e5e7eb;
+}
+
+a{text-decoration:none;color:#fff}
+
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(5,7,12,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #1f2933;
+}
+
+.container{max-width:1100px;margin:auto;padding:24px}
+
+nav{display:flex;justify-content:space-between;align-items:center}
+nav a{margin-left:20px;color:#9ca3af}
+nav a:hover{color:#fff}
+
+.hero{
+  position:relative;
+  padding:140px 24px;
+  background:
+    linear-gradient(180deg,rgba(11,18,32,.85),rgba(5,7,12,.95)),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d") center/cover;
+}
+
+.hero h1{font-size:44px;max-width:720px}
+.hero p{color:#cbd5e1;max-width:600px;font-size:18px}
+
+.glass-btn{
+  display:inline-block;
+  padding:14px 26px;
+  border-radius:14px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.18);
+  font-weight:600;
+  margin-top:24px;
+  transition:.25s;
+}
+.glass-btn:hover{
+  background:rgba(37,99,235,.35);
+  border-color:rgba(37,99,235,.6);
+}
+
+.choice{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;margin-top:40px
+}
+.choice div{
+  padding:24px;
+  border-radius:16px;
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.15);
+  cursor:pointer;
+  transition:.2s;
+}
+.choice div:hover{background:rgba(37,99,235,.25)}
+
+.section{padding:80px 24px;border-top:1px solid #1f2933}
+.section h2{font-size:32px;margin-bottom:32px}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:32px
+}
+
+.card{
+  padding:24px;
+  border-radius:16px;
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.15)
+}
+.card p{color:#cbd5e1}
+
+.about{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:40px;align-items:center
+}
+.about img{width:100%;border-radius:18px}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.step{border-left:2px solid #2563eb;padding-left:16px}
+
+form input,form textarea,form select{
+  width:100%;
+  background:#05070c;
+  border:1px solid #1f2933;
+  color:#fff;
+  padding:14px;
+  border-radius:12px;
+  margin-bottom:12px
+}
+
+footer{
+  padding:40px 24px;
+  text-align:center;
+  color:#6b7280;
+  border-top:1px solid #1f2933
+}
+
+@media(max-width:768px){
+  .hero h1{font-size:34px}
+  .about{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="container">
+<b>Alex Realty</b>
+<div>
+<a href="#about">Обо мне</a>
+<a href="#services">Услуги</a>
+<a href="#process">Как работаем</a>
+<a href="#contacts">Контакт</a>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Частный брокер по недвижимости</h1>
+<p>Более 5 лет опыта и 200 довольных клиентов. Работаю с цифрами, рисками и безопасностью сделки.</p>
+<a class="glass-btn" href="#contacts">Оставить заявку</a>
+
+<div class="choice" id="services">
+<div>Покупка недвижимости</div>
+<div>Новостройки</div>
+<div>Аренда</div>
+<div>Дизайн и ремонты</div>
+<div>Недвижимость в Испании</div>
+<div>Недвижимость в Дубае</div>
+</div>
+</div>
+</section>
+
+<section id="about" class="section container">
+<h2>Обо мне</h2>
+<div class="about">
+<img src="alex.jpg" alt="Александр">
+<div>
+<p><b>Меня зовут Александр.</b> Я частный брокер по недвижимости.</p>
+<p>Более 5 лет опыта и 200 довольных клиентов.</p>
+<p>Окончил Экономический университет в Познани, факультет <b>Finanse, audyt i inwestycje</b>.</p>
+<p>Я тщательно выбираю специалистов, которых рекомендую: кредитные консультанты, дизайнеры, подрядчики по ремонту. Работаю только с профессионалами, за которых готов отвечать репутацией.</p>
+</div>
+</div>
+</section>
+
+<section id="process" class="section container">
+<h2>Как мы работаем</h2>
+<div class="steps">
+<div class="step">1. Консультация</div>
+<div class="step">2. Анализ задачи и рисков</div>
+<div class="step">3. Договор</div>
+<div class="step">4. Подбор решений</div>
+<div class="step">5. Сопровождение до результата</div>
+</div>
+</section>
+
+<section id="contacts" class="section container">
+<h2>Оставить заявку</h2>
+
+<form action="https://script.google.com/macros/s/AKfycbxQqFD7vRxJMUfvpygbA6Yc_ABr2cD0Qgr_GoN5lHU2wc37BV9NUdXSJFT6Qo9P3ZAf/exec">
+<input name="name" placeholder="Имя и фамилия" required>
+<input name="phone" placeholder="Номер телефона" required>
+<input name="messenger" placeholder="Telegram или WhatsApp" required>
+
+<select name="service" required>
+<option value="">Выберите услугу</option>
+<option>Покупка недвижимости</option>
+<option>Новостройки</option>
+<option>Аренда</option>
+<option>Дизайн и ремонты</option>
+<option>Недвижимость в Испании</option>
+<option>Недвижимость в Дубае</option>
+</select>
+
+<textarea name="message" placeholder="Описание задачи"></textarea>
+<button class="glass-btn">Отправить заявку</button>
+</form>
+</section>
+
+<footer>
+© 2026 Alex Realty
+</footer>
+
+</body>
+</html>
