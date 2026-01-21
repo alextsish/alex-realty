@@ -32,6 +32,7 @@ nav a{margin-left:20px;color:#9ca3af}
 nav a:hover{color:#fff}
 
 .hero{
+  position:relative;
   padding:140px 24px;
   background:
     linear-gradient(180deg,rgba(11,18,32,.85),rgba(5,7,12,.95)),
@@ -43,34 +44,22 @@ nav a:hover{color:#fff}
 
 .glass-btn{
   display:inline-block;
-  padding:14px 28px;
+  padding:16px 30px;
   border-radius:14px;
-  background:rgba(37,99,235,.45);
+  background:rgba(37,99,235,.6);
   border:1px solid rgba(37,99,235,.8);
   font-weight:600;
   margin-top:24px;
   transition:.25s;
 }
-.glass-btn:hover{background:rgba(37,99,235,.7)}
+.glass-btn:hover{background:#2563eb}
 
 .section{padding:80px 24px;border-top:1px solid #1f2933}
 .section h2{font-size:32px;margin-bottom:32px}
 
-.choice{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:16px;margin-top:40px
-}
-.choice div{
-  padding:24px;
-  border-radius:16px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.15);
-}
-
 .about{
   display:grid;
-  grid-template-columns:320px 1fr;
+  grid-template-columns:300px 1fr;
   gap:40px;align-items:center
 }
 .about img{width:100%;border-radius:18px}
@@ -78,13 +67,7 @@ nav a:hover{color:#fff}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
 .step{border-left:2px solid #2563eb;padding-left:16px}
 
-.price-box{
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.15);
-  border-radius:16px;
-  padding:24px;
-  max-width:520px
-}
+.prices ul{line-height:1.8;color:#cbd5e1}
 
 form input,form textarea,form select{
   width:100%;
@@ -96,12 +79,11 @@ form input,form textarea,form select{
   margin-bottom:12px
 }
 
-#successMessage{
+#thanks{
   display:none;
-  margin-top:24px;
-  font-size:26px;
-  font-weight:700;
-  color:#4ade80;
+  text-align:center;
+  font-size:28px;
+  padding:60px 20px;
 }
 
 footer{
@@ -125,8 +107,8 @@ footer{
 <b>Alex Realty</b>
 <div>
 <a href="#about">Обо мне</a>
-<a href="#services">Услуги</a>
-<a href="#process">Процесс</a>
+<a href="#prices">Цены</a>
+<a href="#process">Как работаем</a>
 <a href="#contacts">Контакт</a>
 </div>
 </nav>
@@ -135,39 +117,33 @@ footer{
 <section class="hero">
 <div class="container">
 <h1>Частный брокер по недвижимости</h1>
-<p>Более 5 лет опыта и 200 довольных клиентов. Работаю с цифрами, рисками и безопасностью сделки.</p>
+<p>Более 5 лет опыта и 200 довольных клиентов. Безопасные сделки и полный контроль процесса.</p>
 <a class="glass-btn" href="#contacts">Оставить заявку</a>
-
-<div class="choice" id="services">
-<div>Покупка недвижимости</div>
-<div>Новостройки</div>
-<div>Аренда</div>
-<div>Дизайн и ремонты</div>
-<div>Недвижимость в Испании</div>
-<div>Недвижимость в Дубае</div>
-</div>
 </div>
 </section>
 
 <section id="about" class="section container">
 <h2>Обо мне</h2>
 <div class="about">
-<img src="alex.jpg">
+<img src="alex.jpg" alt="Александр">
 <div>
 <p><b>Меня зовут Александр.</b> Частный брокер по недвижимости.</p>
-<p>Окончил Экономический университет в Познани — <b>Finanse, audyt i inwestycje</b>.</p>
-<p>Тщательно выбираю специалистов: кредитные консультанты, дизайнеры, подрядчики.</p>
+<p>5+ лет опыта, более 200 клиентов.</p>
+<p>Экономический университет в Познани — <b>Finanse, audyt i inwestycje</b>.</p>
+<p>Работаю только с проверенными юристами, банками и подрядчиками.</p>
 </div>
 </div>
 </section>
 
-<section class="section container">
+<section id="prices" class="section container">
 <h2>Стоимость услуг</h2>
-<div class="price-box">
-<b>Покупка квартиры — Poznań i okolice</b><br><br>
-До 500.000 — <b>3%</b><br>
-500.000 – 800.000 — <b>2.5%</b><br>
-От 800.000 — <b>2%</b>
+<div class="prices">
+<ul>
+<li>Покупка квартиры (Познань и okolice)</li>
+<li>До 500 000 — <b>3%</b></li>
+<li>500 000 – 800 000 — <b>2.5%</b></li>
+<li>От 800 000 — <b>2%</b></li>
+</ul>
 </div>
 </section>
 
@@ -175,5 +151,21 @@ footer{
 <h2>Как мы работаем</h2>
 <div class="steps">
 <div class="step">1. Консультация</div>
-<div class="step">2. Анализ рисков</div>
-<div class="step">3.
+<div class="step">2. Анализ задачи и рисков</div>
+<div class="step">3. Договор</div>
+<div class="step">4. Подбор объектов</div>
+<div class="step">5. Сопровождение сделки</div>
+</div>
+</section>
+
+<section id="contacts" class="section container">
+<h2>Оставить заявку</h2>
+
+<div id="formBlock">
+<form id="contactForm">
+<input name="name" placeholder="Имя и фамилия" required>
+<input name="phone" placeholder="Номер телефона" required>
+<input name="messenger" placeholder="Telegram / WhatsApp" required>
+
+<select name="service" required>
+<option value="">Выберите услугу</option>
