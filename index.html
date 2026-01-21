@@ -2,196 +2,178 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<title>Alex Realty — Частный брокер по недвижимости</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alex Realty</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
+html{scroll-behavior:smooth}
+section{scroll-margin-top:90px}
+
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  background:linear-gradient(180deg,#0b1220,#05070c);
+  color:#e5e7eb;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
+a{text-decoration:none;color:#fff}
+
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(5,7,12,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #1f2933;
 }
 
-h1, h2 {
-  text-align: center;
+.container{max-width:1100px;margin:auto;padding:24px}
+
+nav{display:flex;justify-content:space-between;align-items:center}
+nav a{margin-left:20px;color:#9ca3af}
+nav a:hover{color:#fff}
+
+.hero{
+  padding:140px 24px;
+  background:
+    linear-gradient(180deg,rgba(11,18,32,.85),rgba(5,7,12,.95)),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d") center/cover;
 }
 
-section {
-  margin-bottom: 80px;
+.hero h1{font-size:44px;max-width:720px}
+.hero p{color:#cbd5e1;max-width:600px;font-size:18px}
+
+.glass-btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:14px;
+  background:rgba(37,99,235,.45);
+  border:1px solid rgba(37,99,235,.8);
+  font-weight:600;
+  margin-top:24px;
+  transition:.25s;
+}
+.glass-btn:hover{background:rgba(37,99,235,.7)}
+
+.section{padding:80px 24px;border-top:1px solid #1f2933}
+.section h2{font-size:32px;margin-bottom:32px}
+
+.choice{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;margin-top:40px
+}
+.choice div{
+  padding:24px;
+  border-radius:16px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.15);
 }
 
-/* ===== КНОПКА ===== */
-button {
-  width: 100%;
-  padding: 16px;
-  font-size: 18px;
-  font-weight: bold;
-  background: linear-gradient(90deg, #4facfe, #00f2fe);
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  color: #000;
-  transition: 0.3s;
+.about{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:40px;align-items:center
+}
+.about img{width:100%;border-radius:18px}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.step{border-left:2px solid #2563eb;padding-left:16px}
+
+.price-box{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:16px;
+  padding:24px;
+  max-width:520px
 }
 
-button:hover {
-  opacity: 0.85;
+form input,form textarea,form select{
+  width:100%;
+  background:#05070c;
+  border:1px solid #1f2933;
+  color:#fff;
+  padding:14px;
+  border-radius:12px;
+  margin-bottom:12px
 }
 
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+#successMessage{
+  display:none;
+  margin-top:24px;
+  font-size:26px;
+  font-weight:700;
+  color:#4ade80;
 }
 
-/* ===== ФОРМА ===== */
-input, select, textarea {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: none;
-  font-size: 16px;
+footer{
+  padding:40px 24px;
+  text-align:center;
+  color:#6b7280;
+  border-top:1px solid #1f2933
 }
 
-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-/* ===== ЦЕННИК ===== */
-.pricing {
-  background: rgba(255,255,255,0.1);
-  padding: 30px;
-  border-radius: 15px;
-}
-
-.pricing ul {
-  list-style: none;
-  padding: 0;
-  font-size: 18px;
-}
-
-.pricing li {
-  margin-bottom: 12px;
-}
-
-/* ===== КОНТАКТЫ ===== */
-.contacts {
-  background: rgba(255,255,255,0.1);
-  padding: 30px;
-  border-radius: 15px;
-  font-size: 18px;
-}
-
-.success {
-  display: none;
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  margin-top: 40px;
+@media(max-width:768px){
+  .hero h1{font-size:34px}
+  .about{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
-  <!-- ===== HERO ===== -->
-  <section>
-    <h1>Alex Realty</h1>
-    <p style="text-align:center; font-size:18px;">
-      Помогу с покупкой недвижимости в Польше
-    </p>
-  </section>
-
-  <!-- ===== ЦЕНЫ ===== -->
-  <section>
-    <h2>Покупка квартиры — Познань и okolice</h2>
-    <div class="pricing">
-      <ul>
-        <li>🏠 До 500 000 PLN — <strong>3%</strong></li>
-        <li>🏠 От 500 000 до 800 000 PLN — <strong>2.5%</strong></li>
-        <li>🏠 От 800 000 PLN — <strong>2%</strong></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ===== ФОРМА ===== -->
-  <section id="contacts">
-    <h2>Оставить заявку</h2>
-
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Имя и фамилия" required>
-      <input type="text" name="phone" placeholder="Номер телефона" required>
-      <input type="text" name="messenger" placeholder="Telegram / WhatsApp" required>
-
-      <select name="service" required>
-        <option value="">Выберите услугу</option>
-        <option value="Покупка недвижимости">Покупка недвижимости</option>
-        <option value="Аренда">Аренда</option>
-        <option value="Консультация">Консультация</option>
-      </select>
-
-      <textarea name="message" placeholder="Кратко опишите запрос"></textarea>
-
-      <button type="submit" id="submitBtn">Оставить заявку</button>
-    </form>
-
-    <div class="success" id="successMessage">
-      ✅ Спасибо!<br>
-      Я свяжусь с вами в ближайшее время
-    </div>
-  </section>
-
-  <!-- ===== КОНТАКТЫ ===== -->
-  <section>
-    <h2>Контакт</h2>
-    <div class="contacts">
-      📲 Telegram: <strong>@sashkatsish</strong><br><br>
-      📞 Телефон: <strong>+48 733 228 539</strong><br><br>
-      ✉️ E-mail: <strong>alextsish@gmail.com</strong>
-    </div>
-  </section>
-
+<header>
+<nav class="container">
+<b>Alex Realty</b>
+<div>
+<a href="#about">Обо мне</a>
+<a href="#services">Услуги</a>
+<a href="#process">Процесс</a>
+<a href="#contacts">Контакт</a>
 </div>
+</nav>
+</header>
 
-<!-- ===== SCRIPT ===== -->
-<script>
-const form = document.getElementById("contactForm");
-const success = document.getElementById("successMessage");
-const button = document.getElementById("submitBtn");
+<section class="hero">
+<div class="container">
+<h1>Частный брокер по недвижимости</h1>
+<p>Более 5 лет опыта и 200 довольных клиентов. Работаю с цифрами, рисками и безопасностью сделки.</p>
+<a class="glass-btn" href="#contacts">Оставить заявку</a>
 
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
+<div class="choice" id="services">
+<div>Покупка недвижимости</div>
+<div>Новостройки</div>
+<div>Аренда</div>
+<div>Дизайн и ремонты</div>
+<div>Недвижимость в Испании</div>
+<div>Недвижимость в Дубае</div>
+</div>
+</div>
+</section>
 
-  button.disabled = true;
-  button.innerText = "Отправка...";
+<section id="about" class="section container">
+<h2>Обо мне</h2>
+<div class="about">
+<img src="alex.jpg">
+<div>
+<p><b>Меня зовут Александр.</b> Частный брокер по недвижимости.</p>
+<p>Окончил Экономический университет в Познани — <b>Finanse, audyt i inwestycje</b>.</p>
+<p>Тщательно выбираю специалистов: кредитные консультанты, дизайнеры, подрядчики.</p>
+</div>
+</div>
+</section>
 
-  const data = new FormData(form);
+<section class="section container">
+<h2>Стоимость услуг</h2>
+<div class="price-box">
+<b>Покупка квартиры — Poznań i okolice</b><br><br>
+До 500.000 — <b>3%</b><br>
+500.000 – 800.000 — <b>2.5%</b><br>
+От 800.000 — <b>2%</b>
+</div>
+</section>
 
-  fetch("https://script.google.com/macros/s/AKfycbxQqFD7vRxJMUfvpygbA6Yc_ABr2cD0Qgr_GoN5lHU2wc37BV9NUdXSJFT6Qo9P3ZAf/exec", {
-    method: "POST",
-    body: data
-  })
-  .then(() => {
-    form.style.display = "none";
-    success.style.display = "block";
-  })
-  .catch(() => {
-    alert("Ошибка отправки. Попробуйте позже.");
-    button.disabled = false;
-    button.innerText = "Оставить заявку";
-  });
-});
-  </script>
-
-</body>
-</html>
+<section id="process" class="section container">
+<h2>Как мы работаем</h2>
+<div class="steps">
+<div class="step">1. Консультация</div>
+<div class="step">2. Анализ рисков</div>
+<div class="step">3.
