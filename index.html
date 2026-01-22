@@ -241,13 +241,17 @@ footer{
   border-top:1px solid #1f2933
 }
 @media (max-width: 768px) {
-  .about  {
+
+  /* ===== ABOUT ===== */
+  .about {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-#about h2 {
+
+  #about h2 {
     text-align: center;
   }
+
   .about img {
     max-width: 100%;
     margin: 0 auto;
@@ -257,59 +261,60 @@ footer{
     font-size: 15px;
     line-height: 1.6;
   }
-  /* === MOBILE HEADER + PRICES FIX === */
-@media (max-width: 768px) {
 
-  /* HEADER */
+  /* ===== HEADER ===== */
   header {
     height: 72px;
+  }
+
+  nav.container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .logo {
+    margin-right: 6px; 
   }
 
   .logo img {
     height: 56px;
   }
 
-  nav {
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
   }
 
-  nav a {
-    margin-left: 12px;
+  .menu a {
     font-size: 14px;
     white-space: nowrap;
   }
 
-  /* FOREIGN REAL ESTATE */
   .price-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+    display: flex;
+    flex-direction: row;        
+    align-items: center;        
+    gap: 12px;
   }
 
-  .price-right {
-    font-size: 14px;
-    margin-left: 0;
-    padding-left: 0;
-    white-space: normal;
+  .price-left {
+    flex: 1;
   }
 
   .price-left div {
     font-size: 15px;
     color: #cbd5e1;
   }
-}
-}
-@media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-  }
 
-  nav a {
-    margin-left: 0;
-    font-size: 14px;
-    write-space: nowrap;
+  .price-right {
+    flex: 1;
+    font-size: 14px;            
+    line-height: 1.4;
+    white-space: normal;
+    text-align: left;
   }
 }
 </style>
