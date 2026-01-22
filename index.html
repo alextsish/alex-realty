@@ -65,22 +65,23 @@ a{text-decoration:none;color:#fff}
   color: #cbd5e1;
 } 
 header{
+  height: 72px;
   position:sticky;top:0;z-index:10;
   background:rgba(5,7,12,.85);
   backdrop-filter:blur(12px);
   border-bottom:1px solid #1f2933;
 }
-
+header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 .container{max-width:1100px;margin:auto;padding:24px}
 
 nav{display:flex;justify-content:space-between;align-items:center}
 nav a{margin-left:20px;color:#9ca3af}
 nav a:hover{color:#fff}
-    
-    header .container {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
+  
 .logo {
   display: flex;
   align-items: center;
