@@ -235,11 +235,13 @@ footer{
   border-top:1px solid #1f2933
 }
 @media (max-width: 768px) {
-  .about {
+  .about  {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-
+#about h2 {
+    text-align: center;
+  }
   .about img {
     max-width: 100%;
     margin: 0 auto;
@@ -254,12 +256,13 @@ footer{
   nav {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 8px;
   }
 
   nav a {
     margin-left: 0;
     font-size: 14px;
+    write-space: nowrap;
   }
 }
 </style>
