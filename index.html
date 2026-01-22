@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Alex Realty — Частный брокер по недвижимости</title>
+<title>Alex Realty — Агенство недвижимости </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
 .price-grid {
@@ -76,10 +76,15 @@ header{
 nav{display:flex;justify-content:space-between;align-items:center}
 nav a{margin-left:20px;color:#9ca3af}
 nav a:hover{color:#fff}
-.logo{
-  font-size:20px;
-  font-weight:700;
-  color:#ffffff;
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 42px;
+  width: auto;
+  display: block;
 }
     
 .hero{
@@ -210,7 +215,10 @@ footer{
 
 <header>
 <nav class="container">
-<div class="logo">Alex Realty</div>
+    <!-- ЛОГО -->
+    <a href="#top" class="logo">
+      <img src="logo.png" alt="Alex Realty">
+    </a>
   <div class="menu">
 <a href="#about"> Владелец фирмы</a>
 <a href="#prices">Цены</a>
