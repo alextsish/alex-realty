@@ -120,6 +120,25 @@ nav a:hover{color:#fff}
   margin-top:24px;
   transition:.25s;
 }
+    /* === FOREIGN REAL ESTATE PRICE LAYOUT === */
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.price-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.price-right {
+  font-weight: 600;
+  color: #cbd5e1;
+  white-space: nowrap;
+}
 .glass-btn:hover{background:#2563eb}
 
 .section{padding:80px 24px;border-top:1px solid #1f2933}
@@ -293,15 +312,19 @@ footer{
     </div>
 
     <div class="price-card">
-      <h3>Зарубежная недвижимость</h3>
-      <ul>
-        <li>Испания</li>
-        <li>Дубай</li>
-        <li><b>Стоимость после консультации</b></li>
-      </ul>
+  <h3>Зарубежная недвижимость</h3>
+
+  <div class="price-row">
+    <div class="price-left">
+      <div>Испания</div>
+      <div>Дубай</div>
     </div>
 
+    <div class="price-right">
+      Стоимость после консультации
+    </div>
   </div>
+</div>
 </section>
 
 <section id="process" class="section container process-section">
