@@ -234,7 +234,22 @@ footer{
   color:#6b7280;
   border-top:1px solid #1f2933
 }
+@media (max-width: 768px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 
+  .about img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .about p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
 @media (max-width: 768px) {
   nav {
     flex-wrap: wrap;
