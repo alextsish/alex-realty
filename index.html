@@ -257,6 +257,47 @@ footer{
     font-size: 15px;
     line-height: 1.6;
   }
+  /* === MOBILE HEADER + PRICES FIX === */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    height: 72px;
+  }
+
+  .logo img {
+    height: 56px;
+  }
+
+  nav {
+    gap: 8px;
+  }
+
+  nav a {
+    margin-left: 12px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* FOREIGN REAL ESTATE */
+  .price-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .price-right {
+    font-size: 14px;
+    margin-left: 0;
+    padding-left: 0;
+    white-space: normal;
+  }
+
+  .price-left div {
+    font-size: 15px;
+    color: #cbd5e1;
+  }
+}
 }
 @media (max-width: 768px) {
   nav {
