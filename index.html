@@ -264,32 +264,33 @@ footer{
 
   /* ===== HEADER ===== */
   header {
-    height: 72px;
+    min-height: 72px;
   }
 
   nav.container {
     display: flex;
     align-items: center;
     gap: 6px;
+    flex-wrap: nowrap;
   }
 
   .logo {
     margin-right: 6px; 
+    flex-shrink: 0;
   }
 
   .logo img {
-    height: 56px;
+    height: 54px;
   }
 
   .menu {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap:nowrap;
     gap: 8px;
   }
 
   .menu a {
-    font-size: 14px;
+    font-size: 13px;
     white-space: nowrap;
   }
 
