@@ -557,6 +557,13 @@ form.addEventListener("submit", function(e){
     body: new FormData(form)
   })
   .then(() => {
+    <!-- Event snippet for Lead formularza kontaktowego conversion page -->
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17899271866/bfVYCO7Bwe4bELrthNdC',
+      'value': 1.0,
+      'currency': 'PLN'
+  });
+
     formBlock.style.display = "none";
     thanks.style.display = "block";
     form.reset();
