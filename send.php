@@ -1,6 +1,6 @@
 <?php
 
-$token = "8298710724:AAE5rqNsAseQNihAZwjVkOggvgrkDC97DBU";
+$token = "8298710724:AAFNUZbyMDpglFRLsMW4JWTmkikdrf-wFL0";
 $chat_id = "583997045";
 
 $text = "📩 Новая заявка с сайта\n\n";
