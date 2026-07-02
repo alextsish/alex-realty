@@ -1,61 +1,293 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-<title>Блог | Alex Nieruchomości</title>
+<style>
 
-<meta name="description"
-content="Полезные статьи о покупке недвижимости, ипотеке и жизни в Польше.">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<link rel="stylesheet" href="styles.css">
-</head>
+body{
+background:#0f0f0f;
+color:#fff;
+font-family:Arial,sans-serif;
+line-height:1.7;
+}
 
-<body>
+header{
+position:sticky;
+top:0;
+background:#111;
+border-bottom:1px solid #222;
+padding:22px 0;
+z-index:100;
+}
 
-<header class="hero">
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+}
 
-<h1>Полезные статьи</h1>
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-<p>
-Новости рынка недвижимости,
-советы по покупке квартир,
-ипотеке и инвестициям в Польше.
-</p>
+.logo{
+font-size:28px;
+font-weight:bold;
+letter-spacing:2px;
+color:white;
+text-decoration:none;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:35px;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#bfa36a;
+}
+
+.hero{
+
+padding:90px 20px;
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:52px;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+max-width:800px;
+
+margin:auto;
+
+font-size:20px;
+
+color:#bfbfbf;
+
+}
+
+.article{
+
+background:#181818;
+
+border:1px solid #2b2b2b;
+
+border-radius:20px;
+
+padding:45px;
+
+margin:60px auto;
+
+max-width:950px;
+
+transition:.3s;
+
+}
+
+.article:hover{
+
+border-color:#bfa36a;
+
+transform:translateY(-3px);
+
+}
+
+.article h2{
+
+font-size:34px;
+
+margin-bottom:25px;
+
+}
+
+.article p{
+
+color:#d7d7d7;
+
+margin-bottom:30px;
+
+}
+
+.button{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:#bfa36a;
+
+color:#111;
+
+font-weight:bold;
+
+text-decoration:none;
+
+border-radius:10px;
+
+}
+
+.button:hover{
+
+opacity:.9;
+
+}
+
+footer{
+
+text-align:center;
+
+padding:60px;
+
+color:#999;
+
+}
+
+</style>
+<header>
+
+<div class="container">
+
+<nav>
+
+<a class="logo" href="index.html">
+
+ANT
+
+</a>
+
+<div class="menu">
+
+<a href="index.html#about">Владелец фирмы</a>
+
+<a href="index.html#prices">Цены</a>
+
+<a href="index.html#process">Как работаем</a>
+
+<a href="blog.html">Блог</a>
+
+<a href="index.html#contacts-info">Контакт</a>
+
+</div>
+
+</nav>
+
+</div>
 
 </header>
 
-<section class="articles">
+<section class="hero">
 
-<div class="card">
+<h1>Блог о недвижимости в Польше</h1>
+
+<p>
+
+Полезные статьи для иностранцев,
+которые хотят купить квартиру,
+получить ипотеку
+или инвестировать в недвижимость.
+
+</p>
+
+</section>
+
+<div class="article">
 
 <h2>
+
 Как иностранцу купить квартиру
 в Польше в 2026 году
+
 </h2>
 
 <p>
 
-Полное руководство:
-документы,
-этапы сделки,
-расходы,
-ипотека и советы.
+Подробная инструкция по покупке недвижимости:
+необходимые документы,
+разрешения,
+налоги,
+ипотека,
+расходы и советы,
+которые помогут избежать ошибок.
 
 </p>
 
-<a class="glass-btn"
+<a class="button"
+
 href="kupit-kvartiru-v-polshe-2026.html">
 
-Читать статью
+Читать статью →
 
 </a>
 
 </div>
 
-</section>
+<div class="article">
 
+<h2>
+
+Ипотека в Польше для иностранцев
+
+</h2>
+
+<p>
+
+Разберем,
+кто может получить кредит,
+какие банки работают с иностранцами
+и сколько нужно иметь собственных средств.
+
+</p>
+
+<a class="button">
+
+Скоро
+
+</a>
+
+</div>
+
+<div class="article">
+
+<h2>
+
+10 ошибок при покупке квартиры
+
+</h2>
+
+<p>
+
+Ошибки,
+которые ежегодно обходятся покупателям
+в тысячи злотых.
+
+</p>
+
+<a class="button">
+
+Скоро
+
+</a>
+
+</div>
+
+<footer>
+
+© Alex Nieruchomości
+
+</footer>
 </body>
-
 </html>
