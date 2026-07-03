@@ -357,6 +357,43 @@ footer{
     text-align: left;
   }
 }
+    /* ---------- БУРГЕР ---------- */
+
+.burger{
+display:none;
+font-size:34px;
+cursor:pointer;
+color:#fff;
+}
+
+@media (max-width:768px){
+
+.menu{
+display:none;
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:#111;
+flex-direction:column;
+padding:20px 0;
+border-top:1px solid #333;
+}
+
+.menu.active{
+display:flex;
+}
+
+.menu a{
+margin:15px 25px;
+font-size:18px;
+}
+
+.burger{
+display:block;
+}
+
+}
 </style>
 </head>
   
@@ -369,6 +406,9 @@ footer{
     <a href="#top" class="logo">
       <img src="logo.png" alt="Alex Realty">
     </a>
+  <div class="burger" onclick="toggleMenu()">
+☰
+</div>
   <div class="menu">
 <a href="#about"> Владелец фирмы</a>
 <a href="#prices">Цены</a>
@@ -582,6 +622,16 @@ form.addEventListener("submit", function(e){
       'value': 1.0,
       'currency': 'PLN'
   });
+    </script>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
 
     formBlock.style.display = "none";
     thanks.style.display = "block";
