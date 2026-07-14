@@ -14,57 +14,99 @@
 <style>
 
 body{
+margin:0;
+font-family:Inter,Arial,sans-serif;
+background:linear-gradient(180deg,#0b1220,#05070c);
+color:#e5e7eb;
+line-height:1.8;
+}
+
+.container{
 max-width:900px;
 margin:auto;
-padding:40px 20px;
-font-family:Arial,sans-serif;
-line-height:1.8;
-background:#0b1220;
-color:#e5e7eb;
+padding:80px 20px;
 }
 
 h1{
-font-size:38px;
-margin-bottom:30px;
+font-size:48px;
+line-height:1.2;
+margin-bottom:35px;
 color:#fff;
 }
 
 h2{
-margin-top:40px;
+margin-top:45px;
+font-size:30px;
 color:#fff;
 }
 
-p{
-margin:18px 0;
+p,li{
+font-size:20px;
 }
 
 ul{
-margin-left:22px;
+padding-left:25px;
 }
 
 a{
-color:#5ea8ff;
+color:#4f8cff;
 text-decoration:none;
 }
 
 .back{
 display:inline-block;
-margin-bottom:30px;
-padding:12px 22px;
+margin-bottom:40px;
+padding:14px 28px;
 background:#2563eb;
 color:#fff;
-border-radius:8px;
+border-radius:12px;
+font-weight:600;
+transition:.3s;
 }
 
 .back:hover{
 background:#1d4ed8;
 }
 
-</style>
+.article{
+background:#111827;
+padding:40px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
 
+@media(max-width:768px){
+
+.container{
+padding:35px 20px;
+}
+
+.article{
+padding:25px;
+}
+
+h1{
+font-size:34px;
+}
+
+h2{
+font-size:26px;
+}
+
+p,li{
+font-size:18px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
+<body>
+
+<div class="container">
+<div class="article">
 
 <a class="back" href="index.html">← На главную</a>
 
@@ -175,6 +217,7 @@ background:#1d4ed8;
 <p>Получить ипотеку в Польше иностранцу вполне реально. Главное — правильно подготовить документы, выбрать подходящий банк и заранее оценить свою кредитоспособность.</p>
 
 <p>Если вы планируете купить квартиру в Познани и хотите пройти весь процесс без лишнего стресса, свяжитесь со мной. Я помогу подобрать недвижимость, организую просмотры и полностью сопровожу сделку до получения ключей.</p>
-
+</div>
+</div>
 </body>
 </html>
