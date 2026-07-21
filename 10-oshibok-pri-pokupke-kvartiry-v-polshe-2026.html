@@ -57,7 +57,42 @@ color:#fff;
 font-family:Arial,Helvetica,sans-serif;
 line-height:1.8;
 }
+.toc{
+    background:#181818;
+    border:1px solid #2b2b2b;
+    border-radius:18px;
+    padding:30px;
+    margin:40px auto;
+}
 
+.toc h3{
+    margin:0 0 20px;
+    color:#caa15c;
+    font-size:28px;
+}
+
+.toc-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:14px;
+}
+
+.toc-grid a{
+    display:block;
+    padding:14px 18px;
+    background:#202020;
+    border:1px solid #303030;
+    border-radius:10px;
+    color:#e5e5e5;
+    text-decoration:none;
+    transition:.2s;
+}
+
+.toc-grid a:hover{
+    border-color:#caa15c;
+    color:#fff;
+    transform:translateY(-2px);
+}
 header{
 
 position:sticky;
