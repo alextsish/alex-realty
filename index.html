@@ -823,6 +823,8 @@ form.addEventListener("submit", function(e){
     body: new FormData(form)
   })
   .then(() => {
+    formBlock.style.display = "none";
+thanks.style.display = "block";
   gtag('event', 'conversion', {
       'send_to': 'AW-17899271866/bfVYCO7Bwe4bELrthNdC',
       'value': 1.0,
